@@ -5,13 +5,34 @@
 %%
 %% \note    only for education !!!
 %% ---------------------------------------------------------------------------
+
+?- current_prolog_flag(encoding, E).
+
+:- dynamic zahl/1.
 :- dynamic ist/1.
 :- dynamic ein/1.
 :- dynamic was/1.
 
 %% ---------------------------------------------------------------------------
-%% global def initions ...
+%% w-Frage(n) ...
 %% ---------------------------------------------------------------------------
+warum   :- format('warum   Frage:'), nl.
+was     :- format('was     Frage:'), nl.
+welche  :- format('welche  Frage:'), nl.
+welchem :- format('welchem Frage:'), nl.
+welchen :- format('welchen Frage:'), nl.
+welcher :- format('welcher Frage:'), nl.
+welches :- format('welches Frage:'), nl.
+wer     :- format('wer     Frage:'), nl.
+wie     :- format('wie     Frage:'), nl.
+wieso   :- format('wieso   Frage:'), nl.
+wo      :- format('wo      Frage:'), nl.
+wofür   :- format('wofür   Frage:'), nl.
+woher   :- format('woher   Frage:'), nl.
+wohin   :- format('wohin   Frage:'), nl.
+wollte  :- format('wollte  Frage:'), nl.
+woraus  :- format('woraus  Frage:'), nl.
+wozu    :- format('wozu    Frage:'), nl.
 
 %% ---------------------------------------------------------------------------
 %% mathematische Ziffern ...
@@ -59,7 +80,15 @@ acht   :- mathe_text_1(Text1), format('acht   ~w', [Text1]), nl,
 neun   :- mathe_text_1(Text1), format('neun   ~w', [Text1]), nl,
           mathe_text_2(Text2), format('neun   ~w', [Text2]), nl,
           mathe_text_3(Text3), format('neun   ~w', [Text3]), nl.
-?- null, nl.
+
+zahl(X) :- X.
+
+was(ist(die(X)))  :- write(X), nl, was, zahl(X).
+was(ist(zahl(X))) :- was, zahl(X).
+was(ist(X))       :- was(ist(zahl(X))).
+
+?- was(ist(die(neun))), nl.
+
 %% ---------------------------------------------------------------------------
 %% Beispiel fÃ¼r eine Anfrage
 %% ---------------------------------------------------------------------------
