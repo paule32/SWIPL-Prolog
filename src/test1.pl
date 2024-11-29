@@ -6,8 +6,6 @@
 %% \note    only for education !!!
 %% ---------------------------------------------------------------------------
 
-?- current_prolog_flag(encoding, E).
-
 :- dynamic zahl/1.
 :- dynamic ist/1.
 :- dynamic ein/1.
@@ -24,16 +22,29 @@ welchen :- format('welchen Frage:'), nl.
 welcher :- format('welcher Frage:'), nl.
 welches :- format('welches Frage:'), nl.
 wer     :- format('wer     Frage:'), nl.
+weshalb :- format('weshalb Frage:'), nl.
 wie     :- format('wie     Frage:'), nl.
 wieso   :- format('wieso   Frage:'), nl.
+wieviel :- format('wieviel Frage:'), nl.
 wo      :- format('wo      Frage:'), nl.
 wofür   :- format('wofür   Frage:'), nl.
 woher   :- format('woher   Frage:'), nl.
 wohin   :- format('wohin   Frage:'), nl.
 wollte  :- format('wollte  Frage:'), nl.
+womit   :- format('womit   Frage:'), nl.
+woran   :- format('woran   Frage:'), nl.
 woraus  :- format('woraus  Frage:'), nl.
+worin   :- format('worin   Frage:'), nl.
+worüber :- format('worüber Frage:'), nl.
+wovon   :- format('wovon   Frage:'), nl.
 wozu    :- format('wozu    Frage:'), nl.
+%% ---------------------------------------------------------------------------
+woraus(macht(man(Apfelschorle))) :- format('Apfelsaft und Minneralwasser.').
+woraus(macht(man(Bier)))         :- format('Hopfen und Malz.').
+woraus(macht(man(Kaffee)))       :- format('Kaffeebohnen und Wasser.').
+woraus(macht(man(Lakritze)))     :- format('Lakritze wird aus einer Süßholzwurzel.').
 
+womit(macht(man(Kaffee)))        :- format('Kaffeemaschiene, Wasser und Kaffee.').
 %% ---------------------------------------------------------------------------
 %% mathematische Ziffern ...
 %% ---------------------------------------------------------------------------
