@@ -9,7 +9,7 @@
 :: ---------------------------------------------------------------------------
 @echo off
 swipl -s test1.pl
-if errorlevevl 1 (goto error)
+if errorlevel 1 (goto error)
 
 goto done
 :error
