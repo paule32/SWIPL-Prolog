@@ -6,10 +6,8 @@
 %% \note    only for education !!!
 %% ---------------------------------------------------------------------------
 
-:- dynamic zahl/1.
-:- dynamic ist/1.
-:- dynamic ein/1.
-:- dynamic was/1.
+apfelschorle :- format('Apfel').
+bier :- format('Bier').
 
 %% ---------------------------------------------------------------------------
 %% w-Frage(n) ...
@@ -39,12 +37,12 @@ worüber :- format('worüber Frage:'), nl.
 wovon   :- format('wovon   Frage:'), nl.
 wozu    :- format('wozu    Frage:'), nl.
 %% ---------------------------------------------------------------------------
-woraus(macht(man(Apfelschorle))) :- format('Apfelsaft und Minneralwasser.').
-woraus(macht(man(Bier)))         :- format('Hopfen und Malz.').
-woraus(macht(man(Kaffee)))       :- format('Kaffeebohnen und Wasser.').
-woraus(macht(man(Lakritze)))     :- format('Lakritze wird aus einer Süßholzwurzel.').
+woraus(macht(man(apfelschorle))) :- format('Apfelsaft und Minneralwasser.').
+woraus(macht(man(bier)))         :- format('Hopfen und Malz.').
+woraus(macht(man(kaffee)))       :- format('Kaffeebohnen und Wasser.').
+woraus(macht(man(lakritze)))     :- format('Lakritze wird aus einer Süßholzwurzel.').
 
-womit(macht(man(Kaffee)))        :- format('Kaffeemaschiene, Wasser und Kaffee.').
+womit(macht(man(kaffee)))        :- format('Kaffeemaschiene, Wasser und Kaffee.').
 %% ---------------------------------------------------------------------------
 %% mathematische Ziffern ...
 %% ---------------------------------------------------------------------------
@@ -118,4 +116,4 @@ ist(ein(hund(ein(saeugetier)))) :-
 %% Skript beenden
 %% ---------------------------------------------------------------------------
 :- nl, write('Ende.'), nl.
-:- halt.
+%%:- halt.
